@@ -1,0 +1,95 @@
+/* Background and overall app styling */
+body {
+    background: linear-gradient(to right, #212121, #1a1a1a);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .todo-app {
+    background: #c589d5;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    text-align: center;
+  }
+  
+  h1.title {
+    font-size: 2.5rem;
+    color: #375bae;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .todo-text {
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  .todo-text:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+  }
+  
+  mat-list-item {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+  }
+  
+  mat-list-item:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  mat-icon {
+    color: #ffd700;
+    margin-right: 10px;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: rgb(255, 249, 249);
+  }
+  
+  /* Cat GIF Popup */
+  .gif-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .gif-popup img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+  }
+  

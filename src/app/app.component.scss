@@ -1,0 +1,108 @@
+/* app.component.scss */
+:host {
+    display: block;
+    height: 100vh;
+  }
+  .todo-image {
+    width: 100%;
+    max-height: 200px; /* Adjust based on your design */
+    object-fit: cover; /* Ensures the image is well-cropped */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Add spacing between the image and title */
+}
+  .todo-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;  /* Adjust the width for your app */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* This ensures the todo list is above the background */
+  }
+
+  
+    .todo-app * {
+        transition: filter 0.3s ease;
+    }
+
+    .todo-app.blur-background {
+        filter: blur(5px);
+    }
+  
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  mat-list {
+    width: 100%;
+  }
+  
+  mat-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .todo-text {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  .todo-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .todo-image {
+    width: 120px; /* Adjust the image size */
+    height: auto;
+  }
+
+  .dancing-cat-container {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    position: absolute;  /* Absolute positioning within the todo-app */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Make the container take up the full width of the todo-app */
+    height: 100%; /* Make the container take up the full height of the todo-app */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    z-index: 1000; /* Make sure the GIF appears above the rest of the content */
+  }
+  
+  .dancing-cat {
+    width: 640px;
+    height: 470px;
+    object-fit: cover; /* Ensures the GIF covers the entire screen */
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  

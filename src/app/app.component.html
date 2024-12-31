@@ -1,0 +1,26 @@
+<div class="todo-app">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWdhc21yMXpwbDJnMTMxMjZ1ZmwyeHpodnM3M2NncG44NXNuNDU1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8HcT5UwUTT0XtlIvmc/giphy.webp" alt="To-Do List" class="todo-image">
+  <h1 class="title">Daily Task Tracker</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Add a new task</mat-label>
+    <input matInput [(ngModel)]="todoForm.value.todo" placeholder="Enter task">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addTodo()">Add Task</button>
+
+  <mat-list>
+    <mat-list-item *ngFor="let todo of todos; let i = index" [ngClass]="{'completed': todo.completed}">
+      <mat-icon mat-list-icon>check_circle</mat-icon>
+      <span class="todo-text" (click)="toggleComplete(i)">{{ todo.text }}</span>
+      <button mat-icon-button color="warn" (click)="deleteTodo(i)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+
+  <button mat-raised-button color="accent" (click)="clearCompleted()">Clear Completed</button>
+  <!-- Dancing cat GIF container -->
+  <div *ngIf="showDancingCat" class="dancing-cat-container">
+    <img src="https://media1.tenor.com/m/jewLdQ8FePgAAAAd/cat-dancing.gif" alt="Dancing Cat" class="dancing-cat">
+  </div>
+</div>
